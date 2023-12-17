@@ -1,7 +1,8 @@
 """Fetches news articles from RSS feeds."""
-from itertools import cycle, islice
-
 import feedparser
+from itertools import cycle, islice
+from requests.exceptions import RequestException
+import requests
 
 from utils.logger import get_logger
 from data_retrieval.openai_integration import prompt_gpt4_turbo
@@ -20,32 +21,48 @@ def fetch_news(
     """
 
     markdown_output = ""
-    logger = get_logger()  # Get the logger for the application
+    logger = get_logger()
     logger.info("Starting to fetch news articles.")
 
     for category, urls in rss_urls.items():
         logger.info(f"Fetching news articles for {category}.")
         markdown_output += f"## {category}\n\n"
-        seen_titles = set()  # Set to store titles for deduplication
+        seen_titles = set()
         articles_count = 0
+        total_failures = 0
 
-        # Create an iterator that cycles through the URLs
         url_cycle = cycle(urls)
+        attempts_per_url = {url: 0 for url in urls}
+        max_attempts = 3  # Maximum attempts per URL
+        max_total_failures = len(urls) * max_attempts
+
         while articles_count < max_articles_per_category:
-            url = next(url_cycle)  # Get the next URL in the cycle
+            url = next(url_cycle)
+            attempts_per_url[url] += 1
+            if attempts_per_url[url] > max_attempts:
+                total_failures += 1
+                if total_failures >= max_total_failures:
+                    logger.warning("All URLs have reached maximum attempts. Exiting.")
+                    break
+                logger.warning(
+                    f"Max attempts exceeded for URL {url}. Moving to the next URL."
+                )
+                continue
+
             logger.info(f"Fetching news from {url}.")
             try:
-                feed = feedparser.parse(url)
+                response = requests.get(url, timeout=10)
+                response.raise_for_status()
+                feed = feedparser.parse(response.content)
                 if feed.bozo:
+                    logger.warning(f"Invalid feed structure from {url}.")
                     continue
 
-                # Use islice to get an iterator for the first unseen entry
                 entries = (
                     entry for entry in feed.entries if entry.title not in seen_titles
                 )
                 entry = next(islice(entries, 1), None)
 
-                # If we have an unseen entry, process it
                 if entry:
                     title = entry.title
                     link = entry.link
@@ -53,14 +70,19 @@ def fetch_news(
                     seen_titles.add(title)
                     articles_count += 1
                     logger.info(f"Fetched news from {url}.")
+            except RequestException as e:
+                logger.error(f"An error occurred while accessing {url}: {e}")
+                continue
             except Exception as e:
-                logger.error(f"An error occurred while fetching news from {url}: {e}")
-                continue  # Continue with the next URL if an error occurred
+                logger.error(f"An error occurred while parsing news from {url}: {e}")
+                continue
+
+        if total_failures >= max_total_failures:
+            break
 
         logger.info(f"Fetched {articles_count} news articles for {category}.")
         markdown_output += "\n"
 
-    # Converts the news into natural language using GPT-4
     logger.info("Converting news articles to natural language.")
     natural_language_news = prompt_gpt4_turbo(
         OPENAI_API_KEY, markdown_output, NEWS_CONTEXT

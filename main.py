@@ -2,8 +2,7 @@
 from template_rendering.markdown_generator import doc_gen
 from utils.logger import get_logger
 
-# TODO: Add tests with pytest and pytest-cov (see tests/morning_briefing_tests.py)
-# TODO: Handle offline briefing generation (use previous data with disclaimer)
+# TODO: Add tests with pytest and pytest-cov (see tests/morning_briefing_tests.py), and add a CI/CD pipeline with GitHub Actions
 # TODO: Add asynchronicity to the script (asyncio, httpx, asyncio TaskGroup)
 # TODO: Call my phone and play the mp3 file (generated with GPT-4 and TTS) with a phone API (Twilio?)
 # TODO: Add a GUI (PySimpleGUI? Streamlit? Tkinter? PyQt?): customise what is included in the briefing, and when it is generated
