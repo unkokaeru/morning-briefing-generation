@@ -1,7 +1,7 @@
 # Simple Morning Briefing Generation
 
 ## Description
-Simple Morning Briefing Generation is a Python project that automates the creation of a morning briefing. Utilizing various APIs and manual data sources, this tool compiles a comprehensive markdown document. The briefing includes a range of data such as a daily haiku, weather updates, news headlines, career insights, a maths problem, calendar events, email summaries, day predictions, chess puzzles, driving questions, a custom good luck message, and random emojis. This is all customizable through the `morning-briefing-template.md` file.
+Simple Morning Briefing Generation is a Python project that automates the creation of a morning briefing. Utilizing various APIs and manual data sources, this tool compiles a comprehensive markdown document. The briefing includes a range of data such as a daily haiku, weather updates, news headlines, calendar events, email summaries, chess puzzles, a custom good luck message, and random emojis. This is all customizable through the `morning-briefing-template.md` file.
 
 ## Features
 - **Customizable Briefing:** Modify the `morning-briefing-template.md` to tailor the briefing content.
