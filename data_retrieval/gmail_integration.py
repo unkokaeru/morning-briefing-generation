@@ -6,8 +6,9 @@ from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-from config.cfg import CREDS_PATH
+from config.cfg import CREDS_PATH, OPENAI_API_KEY, EMAIL_CONTEXT
 from utils.logger import get_logger
+from data_retrieval.openai_integration import prompt_gpt4_turbo
 
 
 def fetch_email_subjects() -> str:
@@ -76,4 +77,11 @@ def fetch_email_subjects() -> str:
             logger.info(f"Added email subject: {subject}")
         logger.info("Finished fetching email subjects.")
 
-    return email_subjects_md
+    if not email_subjects_md:
+        natural_language_output = "You're all caught up, no new emails! :D"
+    else:
+        natural_language_output = prompt_gpt4_turbo(
+            OPENAI_API_KEY, email_subjects_md, EMAIL_CONTEXT
+        )
+
+    return natural_language_output

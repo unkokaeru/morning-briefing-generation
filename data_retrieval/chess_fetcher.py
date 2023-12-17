@@ -34,16 +34,19 @@ def fetch_chess_puzzle(query: dict[str, str]) -> str:
         logger.info("Successfully retrieved puzzle data.")
 
         puzzle_details = (
-            f"Rating: {puzzle['rating']}\n"
-            f"Puzzle ID: [{puzzle['puzzleid']}](lichess.org/training/{puzzle['puzzleid']})\n"
+            f"Here's a puzzle to think about today, it's a bit harder than your usual puzzles at a rating of {puzzle['rating']}. The puzzle ID is [{puzzle['puzzleid']}](https://lichess.org/training/{puzzle['puzzleid']}) in case you want a bit of a hint or you want to check your solution in a more visual way!\n"
+            "\n"
             "```chessboard\n"
             f"fen: {puzzle['fen']}\n"
             "```\n"
-            "#### Solution\n"
+            "\n"
+            "Spoilers! Below is the solution, so try and put your solution below it first so you can check them - but only once you're confident!\n"
+            "\n"
             "```spoiler-block\n"
             f"{puzzle['moves']}\n"
             "```"
         )
+
         logger.info("Puzzle data processed successfully.")
         return puzzle_details
     except (KeyError, IndexError):

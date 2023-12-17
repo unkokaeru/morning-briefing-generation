@@ -14,7 +14,7 @@ def get_haiku(doc_loc: str) -> str:
     logger = get_logger()  # Initialize the logger
     logger.info(f"Starting to get a haiku from {doc_loc}.")
 
-    # create an array of haikus from the markdown document
+    # Create an array of haikus from the markdown document
     haikus = []
     with open(doc_loc, "r") as f:
         logger.info(f"Opened {doc_loc}.")
@@ -27,7 +27,11 @@ def get_haiku(doc_loc: str) -> str:
                 haiku = ""
         logger.info("Completed reading haikus from the document.")
 
-    # return a random haiku from the array
+    # Remove the last newline character from each haiku
+    for i in range(len(haikus)):
+        haikus[i] = haikus[i][:-1]
+
+    # Return a random haiku from the array
     random_index = randint(0, len(haikus) - 1)
     logger.info(f"Returning haiku at index {random_index}.")
     return haikus[random_index]

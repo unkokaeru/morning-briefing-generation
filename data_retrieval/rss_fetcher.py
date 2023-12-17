@@ -4,17 +4,19 @@ from itertools import cycle, islice
 import feedparser
 
 from utils.logger import get_logger
+from data_retrieval.openai_integration import prompt_gpt4_turbo
+from config.cfg import OPENAI_API_KEY, NEWS_CONTEXT
 
 
 def fetch_news(
-    rss_urls: dict[str, list[str]], max_articles_per_category: int = 5
+    rss_urls: dict[str, list[str]], max_articles_per_category: int = 4
 ) -> str:
     """
-    Fetches a limited number of news articles from multiple RSS feed URLs, alternating between sources.
+    Fetches a limited number of news articles from multiple RSS feed URLs, alternating between sources, and converts them to natural language.
 
     :param rss_urls: A dictionary of RSS feed URLs, with the key being the category and the value being a list of URLs.
     :param max_articles_per_category: The maximum number of articles to fetch per category.
-    :return: A string containing the news articles in Markdown
+    :return: Natural language news articles.
     """
 
     markdown_output = ""
@@ -58,4 +60,10 @@ def fetch_news(
         logger.info(f"Fetched {articles_count} news articles for {category}.")
         markdown_output += "\n"
 
-    return markdown_output
+    # Converts the news into natural language using GPT-4
+    logger.info("Converting news articles to natural language.")
+    natural_language_news = prompt_gpt4_turbo(
+        OPENAI_API_KEY, markdown_output, NEWS_CONTEXT
+    )
+
+    return natural_language_news

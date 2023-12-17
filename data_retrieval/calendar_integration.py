@@ -5,15 +5,17 @@ import requests
 from icalendar import Calendar
 
 from utils.logger import get_logger
+from data_retrieval.openai_integration import prompt_gpt4_turbo
+from config.cfg import OPENAI_API_KEY, CAL_CONTEXT
 
 
 def fetch_calendar_events(urls: list[str]) -> str:
     """
-    Fetch calendar events from multiple .ics URLs and return a markdown formatted string.
+    Fetch calendar events from multiple .ics URLs and return a paragraph of natural prose describing the events.
     Only events for the current day are returned.
 
     :param urls: A list of .ics URLs.
-    :return: A markdown formatted string with today's events from all the calendars.
+    :return: A paragraph of natural prose describing the calendar events for the current day.
     """
     markdown_output = ""
     logger = get_logger()  # Initialize the logger
@@ -64,5 +66,13 @@ def fetch_calendar_events(urls: list[str]) -> str:
             logger.error(f"Error: {e}")
             return "..."
 
+    # If no events were found, return a message, otherwise return the markdown formatted string in natural language
+    if not markdown_output:
+        natural_language_output = "No events for today! :D"
+    else:
+        natural_language_output = prompt_gpt4_turbo(
+            OPENAI_API_KEY, markdown_output, CAL_CONTEXT
+        )
+
     logger.info("Finished fetching all calendar events.")
-    return markdown_output
+    return natural_language_output

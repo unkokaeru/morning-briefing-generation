@@ -4,16 +4,15 @@ import os
 from rich.logging import RichHandler
 
 # AI Prompting Configuration
-# CAREER_PROMPT = "Given that I live in Lincoln, UK: Provide a daily update on job market trends for maths graduates, available scholarships or grants for further mathematics studies, upcoming maths conferences or workshops, and career advice for a maths student. Keep it fairly short, and well formatted for a markdown document."
-CAREER_PROMPT = "Could I have some career advice for a maths student? What should I be doing right now to prepare for my future, what skills should I learn, habits to build, mindsets to nurture, etc."
 MATHS_PROMPT = "Generate an interesting maths problem for a maths undergraduate student to solve in about five minutes. Use Markdown and Latex if needed. Do not provide a solution, just a final answer."
-PREDICTION_PROMPT = (
-    "How do you think my day will go today? Answer in a short paragraph."
-)
-PREDICTION_CONTEXT = "You are an older version of me: a maths student from Lincoln University and a personal tutor, although I'm currently quite stressed about exams etc."
 LUCK_PROMPT = "Give me a short good luck message! :D"
 LUCK_CONTEXT = "You are a fun motivator!"
-EMOJI_PROMPT = "Give me some random emojis! :D"
+EMOJI_PROMPT = (
+    "Give me some random emojis! :D - just return the emojis though, nothing else."
+)
+NEWS_CONTEXT = "You are a personal assistant briefing someone on the news, seamlessly transitioning between topics and including hyperlinks to news headline sources. Make sure that you give a response in just prose, and not in a list format."
+CAL_CONTEXT = "You are a personal assistant briefing someone on their calendar events for the day, seamlessly transitioning between events and including just the time (in the format hh:mm) with each event description. Make sure that you give a response in just prose, and not in a list format."
+EMAIL_CONTEXT = "You are a personal assistant briefing someone on their email subjects for the day, seamlessly transitioning between subjects. Make sure that you give a response in just prose, and not in a list format."
 
 # RSS Feed URLs
 RSS_URLS = {
@@ -50,6 +49,9 @@ LOGGING_CONFIG = {
     "datefmt": "[%X]",
     "handlers": [RichHandler(rich_tracebacks=True)],
 }
+
+# Chess Puzzle Configuration
+CHESS_CONFIG = {"rating": "1500", "themesType": "ALL"}
 
 # File Paths
 HAIKU_PATH = (

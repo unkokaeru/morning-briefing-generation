@@ -7,25 +7,21 @@ from jinja2 import Environment, FileSystemLoader
 
 from config.cfg import (
     CAL_URLS,
-    CAREER_PROMPT,
     EMOJI_PROMPT,
     HAIKU_PATH,
     LUCK_CONTEXT,
     LUCK_PROMPT,
-    MATHS_PROMPT,
     OPEN_WEATHER_API_KEY,
     OPENAI_API_KEY,
-    PREDICTION_CONTEXT,
-    PREDICTION_PROMPT,
     RSS_URLS,
     SAVE_LOCATION,
+    CHESS_CONFIG,
 )
 from data_retrieval.calendar_integration import fetch_calendar_events
 from data_retrieval.chess_fetcher import fetch_chess_puzzle
 from data_retrieval.gmail_integration import fetch_email_subjects
 from data_retrieval.haiku_fetcher import get_haiku
 from data_retrieval.openai_integration import prompt_gpt4_turbo
-from data_retrieval.questions_fetcher import get_driving_questions
 from data_retrieval.rss_fetcher import fetch_news
 from data_retrieval.weather_fetcher import get_weather
 from utils.logger import get_logger
@@ -59,23 +55,9 @@ def doc_gen() -> None:
         "news": fetch_news(
             RSS_URLS, int(input("How many news articles would you like to fetch? "))
         ),
-        "career_information": prompt_gpt4_turbo(
-            OPENAI_API_KEY,
-            CAREER_PROMPT,
-        ),
-        "maths_problem": prompt_gpt4_turbo(
-            OPENAI_API_KEY,
-            MATHS_PROMPT,
-        ),
         "calendar_events": fetch_calendar_events(CAL_URLS),
         "emails": fetch_email_subjects(),
-        "day_prediction": prompt_gpt4_turbo(
-            OPENAI_API_KEY,
-            PREDICTION_PROMPT,
-            PREDICTION_CONTEXT,
-        ),
-        "chess_puzzle": fetch_chess_puzzle({"rating": "1500", "themesType": "ALL"}),
-        "driving_questions": get_driving_questions(),
+        "chess_puzzle": fetch_chess_puzzle(CHESS_CONFIG),
         "good_luck_message": prompt_gpt4_turbo(
             OPENAI_API_KEY,
             LUCK_PROMPT,
@@ -85,7 +67,6 @@ def doc_gen() -> None:
             OPENAI_API_KEY,
             EMOJI_PROMPT,
         ),
-        "biggest_takeaway": input("What was your biggest takeaway from yesterday? "),
         # ... other data ...
     }
 

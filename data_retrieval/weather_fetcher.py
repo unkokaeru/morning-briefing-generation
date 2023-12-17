@@ -30,7 +30,7 @@ def get_weather(api_key: str, location: str) -> str:
 
     main = weather_data["main"]
     weather_desc = weather_data["weather"][0]["description"]
-    current_weather = f"Current weather in {location} is {weather_desc} with a temperature of {main['temp']}°C."
+    current_weather = f"Today, in {location}, it looks like {weather_desc} with a current temperature of about {main['temp']}°C."
     logger.info(f"Current weather in {location} is {weather_desc}.")
 
     logger.info(f"Fetching forecast data from {forecast_url}.")
@@ -59,6 +59,22 @@ def get_weather(api_key: str, location: str) -> str:
     most_frequent_desc = Counter(descriptions).most_common(1)[0][0]
 
     logger.info("Completed fetching weather data.")
-    forecast_str = f"Overall forecast for {location} today is {most_frequent_desc} with an average temperature of {average_temp:.1f}°C."
+
+    # Construct the forecast string based on the average temperature and most frequent weather description
+    if average_temp > main["temp"]:
+        if most_frequent_desc == weather_desc:
+            forecast_str = f"Overall for today though, it'll be more of the same but warm up to an average of {average_temp:.1f}°C."
+        else:
+            forecast_str = f"Overall for today though, it'll be {most_frequent_desc} and warm up to an average of {average_temp:.1f}°C."
+    elif average_temp < main["temp"]:
+        if most_frequent_desc == weather_desc:
+            forecast_str = f"Overall for today though, it'll be more of the same but cool down to an average of {average_temp:.1f}°C."
+        else:
+            forecast_str = f"Overall for today though, it'll be {most_frequent_desc} and cool down to an average of {average_temp:.1f}°C."
+    else:
+        if most_frequent_desc == weather_desc:
+            forecast_str = "Overall for today though, the weather won't change much."
+        else:
+            forecast_str = f"Overall for today though, it'll be {most_frequent_desc} and continue to be about {average_temp:.1f}°C."
 
     return current_weather + " " + forecast_str
