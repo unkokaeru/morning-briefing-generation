@@ -52,9 +52,7 @@ def doc_gen() -> None:
         "haiku": get_haiku(HAIKU_PATH),
         "date": datetime.now().strftime("%Y-%m-%d"),
         "weather": get_weather(OPEN_WEATHER_API_KEY, "Lincoln, UK"),
-        "news": fetch_news(
-            RSS_URLS, int(input("How many news articles would you like to fetch? "))
-        ),
+        "news": fetch_news(RSS_URLS),
         "calendar_events": fetch_calendar_events(CAL_URLS),
         "emails": fetch_email_subjects(),
         "chess_puzzle": fetch_chess_puzzle(CHESS_CONFIG),
