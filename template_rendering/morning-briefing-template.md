@@ -10,11 +10,13 @@
 
 ## Dailies
 
-First up, starting the day with a [game of chess](https://www.chess.com/play/online). Then, moving onto a quick [Typeracer match](https://play.typeracer.com) and [Monkeytype test](https://monkeytype.com) to yourself typing quickly, warming up to quickly type out a solution to a [Project Euler problem](https://projecteuler.net/archives).
+First up, starting the day with a [game of chess](https://www.chess.com/play/online). Then, moving onto a quick [Typeracer match](https://play.typeracer.com), [Typelit page](https://www.typelit.io/typing-console/Metamorphosis) and [Monkeytype test](https://monkeytype.com) to yourself typing quickly, warming up to quickly type out a solution to a [Project Euler problem](https://projecteuler.net/archives).
 
 That might be quite an intensive task, so next up we'll cool down a bit with a bit of [Sudoku](https://www.dailysudoku.com/sudoku/play.shtml?today=1), followed by a fun game of [Chessle](https://jackli.gg/chessle/). Now that your mind has relaxed a bit again, let's do some Brilliant courses on [LLMs](https://brilliant.org/courses/how-llms-work/?) and [Calculus](https://brilliant.org/courses/multivariable-calculus/)!
 
 By this time, you probably want to move somewhere else, so let's do something we can do on the go if you want to: [Lichess tactics](https://lichess.org/study/topic/Tactics/hot) and [Chess.com puzzle](https://www.chess.com/puzzles). Now that you've moved a bit, let's explore the world in a [Geoguessr game](https://www.geoguessr.com) and make sure you know the country names in [Globle](https://globle-game.com)!
+
+Now, just before we finish up with some proper thinking, let's combine the previous two dailies into [Worldle](https://worldle.teuteuf.fr), then play the regular old [Wordle](https://www.nytimes.com/games/wordle/index.html).
 
 Finally, we'll end this morning's dailies by making sure you can still program somewhat! Here's a little list, choose a few to explore today:
 
@@ -39,8 +41,10 @@ Finally, we'll end this morning's dailies by making sure you can still program s
 
 {{ chess_puzzle }}
 
+#### My Solution
+
 ```
-My solution
+...
 ```
 
 ### Daily Games

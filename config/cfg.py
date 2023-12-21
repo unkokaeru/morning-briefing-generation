@@ -54,9 +54,7 @@ LOGGING_CONFIG = {
 CHESS_CONFIG = {"rating": "1500", "themesType": "ALL"}
 
 # File Paths
-HAIKU_PATH = (
-    "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\My Haikus.md"
-)
+HAIKU_PATH = "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Main User Facing Pages\\My Haikus.md"
 
 # fetch API keys from .env file or prompt user to enter them manually
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", input("Enter your OpenAI API key: "))
@@ -65,9 +63,7 @@ OPEN_WEATHER_API_KEY = os.getenv(
 )
 
 # Gmail API Credentials
-CREDS_PATH = "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Morning Briefing Generation\\config\\credentials.json"
+CREDS_PATH = "C:\\Users\\wills\\Documents\\GitHub\\morning-briefing-generation\\config\\credentials.json"
 
 # Where to save the generated markdown document
-SAVE_LOCATION = (
-    "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Day by day\\"
-)
+SAVE_LOCATION = "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Main User Facing Pages\\Day by day\\"
