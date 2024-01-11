@@ -18,6 +18,8 @@ By this time, you probably want to move somewhere else, so let's do something we
 
 Now, just before we finish up with some proper thinking, let's combine the previous two dailies into [Worldle](https://worldle.teuteuf.fr), then play the regular old [Wordle](https://www.nytimes.com/games/wordle/index.html).
 
+However - you're pretty bad with animal names. So, brush up on them [here](https://metazooa.com)! :D
+
 Finally, we'll end this morning's dailies by making sure you can still program somewhat! Here's a little list, choose a few to explore today:
 
 - [Functional programming](https://www.hackerrank.com/domains/fp)
