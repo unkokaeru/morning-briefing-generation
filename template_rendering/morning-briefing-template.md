@@ -65,3 +65,28 @@ Here are the game(s) I've done today, including an analysis for each one:
 Have a look at the to-do list in [[The Scholar's Ledger]], or not, you do have free will after all :)
 
 {{ random_emojis }}
+
+# 風船航路
+
+- [ ] 06:00 - 06:30 🌅 Wake up and Breakfast **at home**
+- [ ] 06:30 - 07:00 🚶‍♂️ Morning Walk **outside**
+- [ ] 07:00 - 08:30 🏋️‍♂️ Train Calisthenics at the Gym **at the gym**
+- [ ] 08:30 - 09:00 🧹 Quick Tidy Up **at home**
+- [ ] 09:00 - 10:00 📰 Morning Briefing Read and Act on Dailies **at home**
+- [ ] 10:00 - 11:00 📚 Read Mathematical Texts **at the library, first floor**
+- [ ] 11:00 - 11:30 🥪 Quick Lunch Preparation and Eating **at home, unless I've prepared something**
+- [ ] 11:30 - 12:30 💻 Work on Programming Projects **at the Isaac Newton Building**
+- [ ] 12:30 - 13:00 📈 Implement Basic Marketing Strategy for Tutoring Services **at a café**
+- [ ] 13:00 - 13:30 ♟️ Chess Activities (Learn Openings) **outside, or at the library, ground floor**
+- [ ] 13:30 - 14:00 ♟️ Solve Chess Puzzles **outside, or at the library, ground floor**
+- [ ] 14:00 - 15:00 🔍 Random Research **at the library, third floor**
+- [ ] 15:00 - 16:00 💻📚 Continue Programming Projects (or More Math Reading) **at the Isaac Newton Building**
+- [ ] 16:00 - 16:30 ♟️ Play a Chess Game **outside, or at the library, ground floor**
+- [ ] 16:30 - 17:00 🇯🇵 Japanese Study (Genki I, Hiragana, Basic Kanji and Katakana) **at the library, second floor**
+- [ ] 17:00 - 18:00 🍳 Culinary Study and Dinner Preparation **at home**
+- [ ] 18:00 - 18:30 🍜📺 Dinner while Watching Anime **at home**
+- [ ] 18:30 - 19:30 ❤️ Quality Time with Partner **at home**
+- [ ] 19:30 - 20:00 🧘‍♂️ Meditation **at home**
+- [ ] 20:00 - 21:00 🛋️ Relaxation / Free Time **at home**
+- [ ] 21:00 - 21:30 🌜 Bedtime Routine **at home**
+- [ ] 21:30 - 23:59 💤 Sleep **at home**
