@@ -16,6 +16,8 @@ from config.cfg import (
     RSS_URLS,
     SAVE_LOCATION,
     CHESS_CONFIG,
+    SCHEDULE_PROMPT,
+    SCHEDULE_CONTEXT,
 )
 from data_retrieval.calendar_integration import fetch_calendar_events
 from data_retrieval.chess_fetcher import fetch_chess_puzzle
@@ -64,6 +66,11 @@ def doc_gen() -> None:
         "random_emojis": prompt_gpt4_turbo(
             OPENAI_API_KEY,
             EMOJI_PROMPT,
+        ),
+        "day_schedule": prompt_gpt4_turbo(
+            OPENAI_API_KEY,
+            SCHEDULE_PROMPT + fetch_calendar_events(CAL_URLS),
+            SCHEDULE_CONTEXT,
         ),
         # ... other data ...
     }
