@@ -1,5 +1,14 @@
 {{ haiku }}
 
+# Hobonichi Workflow
+
+- [ ] Tick off the day.
+- [ ] Write down the day summary sentence.
+- [ ] Update monthly habit tracking/weather.
+- [ ] Update weekly schedule.
+- [ ] Update day page.
+- [ ] Update my 100.
+
 # Morning Briefing ({{ date }})
 
 {{ weather }}
