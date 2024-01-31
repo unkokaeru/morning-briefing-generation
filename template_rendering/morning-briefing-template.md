@@ -71,6 +71,7 @@ Here are the game(s) I've done today, including an analysis for each one:
 {{ good_luck_message }}
 
 ### Now...
+
 Have a look at the to-do list in [[The Scholar's Ledger]], or not, you do have free will after all :)
 
 {{ random_emojis }}
