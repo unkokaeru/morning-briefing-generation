@@ -13,36 +13,28 @@ EMOJI_PROMPT = (
 NEWS_CONTEXT = "You are a personal assistant briefing someone on the news, seamlessly transitioning between topics and including hyperlinks to news headline sources. Make sure that you give a response in just prose, and not in a list format."
 CAL_CONTEXT = "You are a personal assistant briefing someone on their calendar events for the day, seamlessly transitioning between events and including just the time (in the format hh:mm) with each event description. Make sure that you give a response in just prose, and not in a list format."
 EMAIL_CONTEXT = "You are a personal assistant briefing someone on their email subjects for the day, seamlessly transitioning between subjects. Make sure that you give a response in just prose, and not in a list format."
-SCHEDULE_PROMPT = (
-"""
-- [ ] 06:00 - 06:30 🌅 Wake up and Breakfast **at home**
-- [ ] 06:30 - 07:00 🚶‍♂️ Morning Walk **outside**
-- [ ] 07:00 - 08:30 🏋️‍♂️ Train Calisthenics at the Gym **at the gym**
-- [ ] 08:30 - 09:00 🧹 Quick Tidy Up **at home**
-- [ ] 09:00 - 10:00 📰 Morning Briefing Read and Act on Dailies **at home**
-- [ ] 10:00 - 11:00 📚 Read Mathematical Texts **at the library, first floor**
-- [ ] 11:00 - 11:30 🥪 Quick Lunch Preparation and Eating **at home, unless I've prepared something**
-- [ ] 11:30 - 12:30 💻 Work on Programming Projects **at the Isaac Newton Building**
-- [ ] 12:30 - 13:00 📈 Implement Basic Marketing Strategy for Tutoring Services **at a café**
-- [ ] 13:00 - 13:30 ♟️ Chess Activities (Learn Openings) **outside, or at the library, ground floor**
-- [ ] 13:30 - 14:00 ♟️ Solve Chess Puzzles **outside, or at the library, ground floor**
-- [ ] 14:00 - 15:00 🔍 Random Research **at the library, third floor**
-- [ ] 15:00 - 16:00 💻📚 Continue Programming Projects (or More Math Reading) **at the Isaac Newton Building**
-- [ ] 16:00 - 16:30 ♟️ Play a Chess Game **outside, or at the library, ground floor**
-- [ ] 16:30 - 17:00 🇯🇵 Japanese Study (Genki I, Hiragana, Basic Kanji and Katakana) **at the library, second floor**
-- [ ] 17:00 - 18:00 🍳 Culinary Study and Dinner Preparation **at home**
-- [ ] 18:00 - 18:30 🍜📺 Dinner while Watching Anime **at home**
-- [ ] 18:30 - 19:30 ❤️ Quality Time with Partner **at home**
-- [ ] 19:30 - 20:00 🧘‍♂️ Meditation **at home**
-- [ ] 20:00 - 21:00 🛋️ Relaxation / Free Time **at home**
-- [ ] 21:00 - 21:30 🌜 Bedtime Routine **at home**
-- [ ] 21:30 - 23:59 💤 Sleep **at home**
+SCHEDULE_PROMPT = """
+- [ ] 08:00 - 09:00: Breakfast
+- [ ] 09:00 - 10:00: Library/Hobby
+- [ ] 10:00 - 11:00: Library/Hobby
+- [ ] 11:00 - 12:00: Library/Hobby
+- [ ] 12:00 - 13:00: Library/Hobby
+- [ ] 13:00 - 14:00: Lunch
+- [ ] 14:00 - 15:00: Library/Gym
+- [ ] 15:00 - 16:00: Library/Gym
+- [ ] 16:00 - 17:00: Library/Gym
+- [ ] 17:00 - 18:00: Library/Gym
+- [ ] 18:00 - 19:00: Dinner
+- [ ] 19:00 - 20:00: Anime
+- [ ] 20:00 - 21:00: Partner Time
+- [ ] 21:00 - 22:00: Self-Care/Hygiene
+- [ ] 22:00 - 23:00: Reading Time
+- [ ] 23:00 - 00:00: Sleep
 
 Add the following activity, or activities, to the schedule:
 
 """
-)
-SCHEDULE_CONTEXT = "You are a program that adjusts a given schedule to fit in new activities. You are given a schedule, and a new activity (or multiple activities). You must add the new activity to the schedule by moving and editing activities to make room for the new activity, and return the new schedule. If it's a similar activity, feel free to just replace it - the new activities take priority. Use the same format given for the response."
+SCHEDULE_CONTEXT = "You are a program to replace hour slots with new given activities. Replace similar activities, e.g. replace 'Library/Hobby' with 'Maths Lecture' because it fits the library theme. Give the response in a list format, with each activity on a new line, as it was given to you: give nothing else in the response."
 
 # RSS Feed URLs
 RSS_URLS = {
