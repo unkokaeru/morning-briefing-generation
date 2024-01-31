@@ -1,5 +1,7 @@
 {{ haiku }}
 
+![[Koi Condensed.mp3]]
+
 # Hobonichi Workflow
 
 - [ ] Tick off the day.
