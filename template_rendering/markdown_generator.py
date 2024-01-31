@@ -26,6 +26,7 @@ from data_retrieval.haiku_fetcher import get_haiku
 from data_retrieval.openai_integration import prompt_gpt4_turbo
 from data_retrieval.rss_fetcher import fetch_news
 from data_retrieval.weather_fetcher import get_weather
+from data_retrieval.workout_generation import get_workout
 from utils.logger import get_logger
 
 
@@ -67,6 +68,7 @@ def doc_gen() -> None:
             OPENAI_API_KEY,
             EMOJI_PROMPT,
         ),
+        "workout": get_workout(),
         "day_schedule": prompt_gpt4_turbo(
             OPENAI_API_KEY,
             SCHEDULE_PROMPT + fetch_calendar_events(CAL_URLS),

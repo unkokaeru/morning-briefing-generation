@@ -75,6 +75,10 @@ Have a look at the to-do list in [[The Scholar's Ledger]], or not, you do have f
 
 {{ random_emojis }}
 
+# Workout
+
+{{ workout }}
+
 # 風船航路
 
 {{ day_schedule }}
