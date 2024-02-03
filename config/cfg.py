@@ -1,4 +1,5 @@
 """Configuration file for the morning briefing application."""
+
 import os
 
 from rich.logging import RichHandler
@@ -13,28 +14,8 @@ EMOJI_PROMPT = (
 NEWS_CONTEXT = "You are a personal assistant briefing someone on the news, seamlessly transitioning between topics and including hyperlinks to news headline sources. Make sure that you give a response in just prose, and not in a list format."
 CAL_CONTEXT = "You are a personal assistant briefing someone on their calendar events for the day, seamlessly transitioning between events and including just the time (in the format hh:mm) with each event description. Make sure that you give a response in just prose, and not in a list format."
 EMAIL_CONTEXT = "You are a personal assistant briefing someone on their email subjects for the day, seamlessly transitioning between subjects. Make sure that you give a response in just prose, and not in a list format."
-SCHEDULE_PROMPT = """
-- [ ] 08:00 - 09:00: Breakfast
-- [ ] 09:00 - 10:00: Library/Hobby
-- [ ] 10:00 - 11:00: Library/Hobby
-- [ ] 11:00 - 12:00: Library/Hobby
-- [ ] 12:00 - 13:00: Library/Hobby
-- [ ] 13:00 - 14:00: Lunch
-- [ ] 14:00 - 15:00: Library/Gym
-- [ ] 15:00 - 16:00: Library/Gym
-- [ ] 16:00 - 17:00: Library/Gym
-- [ ] 17:00 - 18:00: Library/Gym
-- [ ] 18:00 - 19:00: Dinner
-- [ ] 19:00 - 20:00: Anime
-- [ ] 20:00 - 21:00: Partner Time
-- [ ] 21:00 - 22:00: Self-Care/Hygiene
-- [ ] 22:00 - 23:00: Reading Time
-- [ ] 23:00 - 00:00: Sleep
-
-Add the following activity, or activities, to the schedule:
-
-"""
-SCHEDULE_CONTEXT = "You are a program to replace hour slots with new given activities. Replace similar activities, e.g. replace 'Library/Hobby' with 'Maths Lecture' because it fits the library theme. Give the response in a list format, with each activity on a new line, as it was given to you: give nothing else in the response."
+SCHEDULE_PROMPT = "Extract activities from the following, and add them in a logical place in the above schedule, replacing similar activities."
+SCHEDULE_CONTEXT = "You are a program to replace similar activities in a schedule with the activities provided, returning a schedule in the exact same format as was given, with no additional information or communication."
 
 # RSS Feed URLs
 RSS_URLS = {

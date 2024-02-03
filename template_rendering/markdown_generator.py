@@ -1,4 +1,5 @@
 """Generates a markdown document with a morning briefing for the user."""
+
 import os
 from datetime import datetime
 from pathlib import Path
@@ -27,6 +28,7 @@ from data_retrieval.openai_integration import prompt_gpt4_turbo
 from data_retrieval.rss_fetcher import fetch_news
 from data_retrieval.weather_fetcher import get_weather
 from data_retrieval.workout_generation import get_workout
+from data_retrieval.schedule_generation import get_schedule
 from utils.logger import get_logger
 
 
@@ -71,7 +73,7 @@ def doc_gen() -> None:
         "workout": get_workout(),
         "day_schedule": prompt_gpt4_turbo(
             OPENAI_API_KEY,
-            SCHEDULE_PROMPT + fetch_calendar_events(CAL_URLS),
+            get_schedule() + SCHEDULE_PROMPT + fetch_calendar_events(CAL_URLS),
             SCHEDULE_CONTEXT,
         ),
         # ... other data ...
