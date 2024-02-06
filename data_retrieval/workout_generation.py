@@ -6,7 +6,7 @@ from typing import List
 from utils.logger import get_logger
 
 
-def get_workout() -> List[str]:
+def get_workout() -> List[str] | None:
     """
     A function to get a workout based on the day of the week, based on the Alberto Nuñez Upper Lower Program.
 
@@ -58,7 +58,8 @@ def get_workout() -> List[str]:
             "| Abs Crunch (Cable)                | 2    | 06-10  | @7-9  |",
         ]
     else:
-        workout = ["Rest day!"]
+        logger.info("Skipping workout generation - rest day.")
+        return None
 
     logger.info("Completed getting the workout.")
 
