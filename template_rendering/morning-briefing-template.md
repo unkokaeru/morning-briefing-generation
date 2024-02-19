@@ -27,11 +27,14 @@ That might be quite an intensive task, so next up we'll cool down a bit with a b
 
 By this time, you probably want to move somewhere else, so let's do something we can do on the go if you want to: [Lichess tactics](https://lichess.org/study/topic/Tactics/hot) and [Chess.com puzzle](https://www.chess.com/puzzles). Now that you've moved a bit, let's explore the world in a [Geoguessr game](https://www.geoguessr.com) and make sure you know the country names in [Globle](https://globle-game.com)!
 
-But, we don't want to forget our [[language learning]]! So, next up we'll quiz some [kana](https://kana-quiz.tofugu.com) and learn/practice some [kanji](https://www.wanikani.com/dashboard).
+But, we don't want to forget our [[language learning]]! So, next up we'll quiz some [kana](https://kana-quiz.tofugu.com) and learn/practice some [kanji](https://www.wanikani.com/dashboard). Then, we'll move back to chess for a bit to review my favourite openings - choose one white opening and one black opening to start the day from the following:
 
-Now, just before we finish up with some proper thinking, let's combine the previous two dailies into [Worldle](https://worldle.teuteuf.fr), then play the regular old [Wordle](https://www.nytimes.com/games/wordle/index.html).
+- [King's Indian](https://www.youtube.com/watch?v=5XyayUs6J1M) (black opening),
+- [London](https://www.youtube.com/watch?v=dksvHyyI_Vo) (white opening),
+- [Caro-Kann](https://www.youtube.com/watch?v=0p_881Nwoo4) (black opening),
+- [Ruy López](https://www.youtube.com/watch?v=csJKauwbYFk) (white opening).
 
-However - you're pretty bad with animal names. So, brush up on them [here](https://metazooa.com)! :D
+Now, just before we finish up with some proper thinking, let's combine the previous two dailies into [Worldle](https://worldle.teuteuf.fr), then play the regular old [Wordle](https://www.nytimes.com/games/wordle/index.html). However - you're pretty bad with animal names. So, brush up on them [here](https://metazooa.com)! :D
 
 Finally, we'll end this morning's dailies by making sure you can still program somewhat! Here's a little list, choose a few to explore today:
 
