@@ -15,7 +15,7 @@ EMOJI_PROMPT = (
 NEWS_CONTEXT = "You are a personal assistant briefing someone on the news, seamlessly transitioning between topics and including hyperlinks to news headline sources. Make sure that you give a response in just prose, and not in a list format."
 CAL_CONTEXT = "You are a personal assistant briefing someone on their calendar events for the day, seamlessly transitioning between events and including just the time (in the format hh:mm) with each event description. Make sure that you give a response in just prose, and not in a list format."
 EMAIL_CONTEXT = "You are a personal assistant briefing someone on their email subjects for the day, seamlessly transitioning between subjects. Make sure that you give a response in just prose, and not in a list format."
-SCHEDULE_PROMPT = "Extract activities from the following, and add them in a logical place in the above schedule, replacing similar activities."
+SCHEDULE_PROMPT = "Extract activities from the following, and add them in a logical place in the above schedule, replacing similar activities:"
 SCHEDULE_CONTEXT = "You are a program to replace similar activities in a schedule with the activities provided, returning a schedule in the exact same format as was given, with no additional information or communication."
 
 # RSS Feed URLs
