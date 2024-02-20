@@ -1,6 +1,7 @@
 """Configuration file for the morning briefing application."""
 
 import os
+from dotenv import load_dotenv
 
 from rich.logging import RichHandler
 
@@ -60,11 +61,12 @@ CHESS_CONFIG = {"rating": "1500", "themesType": "ALL"}
 # File Paths
 HAIKU_PATH = "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Main User Facing Pages\\My Haikus.md"
 
-# fetch API keys from .env file or prompt user to enter them manually
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", input("Enter your OpenAI API key: "))
-OPEN_WEATHER_API_KEY = os.getenv(
-    "OPEN_WEATHER_API_KEY", input("Enter your OpenWeather API key: ")
+# Fetch API keys from .env file
+load_dotenv(
+    dotenv_path="C:\\Users\\wills\\Documents\\GitHub\\morning-briefing-generation\\.env"
 )
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 
 # Gmail API Credentials
 CREDS_PATH = "C:\\Users\\wills\\Documents\\GitHub\\morning-briefing-generation\\config\\credentials.json"
