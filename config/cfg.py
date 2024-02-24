@@ -1,8 +1,9 @@
 """Configuration file for the morning briefing application."""
 
 import os
-from dotenv import load_dotenv
+from pathlib import Path
 
+from dotenv import load_dotenv
 from rich.logging import RichHandler
 
 # AI Prompting Configuration
@@ -62,14 +63,14 @@ CHESS_CONFIG = {"rating": "1500", "themesType": "ALL"}
 HAIKU_PATH = "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Main User Facing Pages\\My Haikus.md"
 
 # Fetch API keys from .env file
-load_dotenv(
-    dotenv_path="C:\\Users\\wills\\Documents\\GitHub\\morning-briefing-generation\\.env"
-)
+load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 
+print(OPENAI_API_KEY, OPEN_WEATHER_API_KEY)
+
 # Gmail API Credentials
-CREDS_PATH = "C:\\Users\\wills\\Documents\\GitHub\\morning-briefing-generation\\config\\credentials.json"
+CREDS_PATH = Path(__file__).parent / "credentials.json"
 
 # Where to save the generated markdown document
 SAVE_LOCATION = "C:\\Users\\wills\\Documents\\GitHub\\digital-garden\\content\\Main User Facing Pages\\Day by day\\"
