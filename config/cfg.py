@@ -67,8 +67,6 @@ load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 
-print(OPENAI_API_KEY, OPEN_WEATHER_API_KEY)
-
 # Gmail API Credentials
 CREDS_PATH = Path(__file__).parent / "credentials.json"
 
