@@ -71,14 +71,18 @@ def doc_gen() -> None:
             EMOJI_PROMPT,
         ),
         "workout": "Rest day! :D" if get_workout() is None else get_workout(),
-        "day_schedule": prompt_gpt4_turbo(
-            OPENAI_API_KEY,
-            get_schedule()
-            + "\n\n"
-            + SCHEDULE_PROMPT
-            + "\n"
-            + fetch_calendar_events(CAL_URLS),
-            SCHEDULE_CONTEXT,
+        "day_schedule": (
+            "..."
+            if fetch_calendar_events(CAL_URLS) == "..."
+            else prompt_gpt4_turbo(
+                OPENAI_API_KEY,
+                get_schedule()
+                + "\n\n"
+                + SCHEDULE_PROMPT
+                + "\n"
+                + fetch_calendar_events(CAL_URLS),
+                SCHEDULE_CONTEXT,
+            )
         ),
         # ... other data ...
     }
