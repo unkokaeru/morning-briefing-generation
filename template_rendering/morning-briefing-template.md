@@ -1,91 +1,89 @@
+# Morning briefing for {{ date }}
+
 {{ haiku }}
 
-![[Koi Condensed.mp3]]
+Good morning, William! Here's your morning briefing for today.
 
-# Hobonichi Workflow
-
-- [ ] Tick off the day.
-- [ ] Write down the day summary sentence.
-- [ ] Update monthly habit tracking/weather.
-- [ ] Update weekly schedule.
-- [ ] Update day page.
-- [ ] Update my 100.
-
-# Morning Briefing ({{ date }})
+## Things to catch up on
 
 {{ weather }}
 
-## News
-
 {{ news }}
+
+{{ emails }}
+
+{{ calendar_events }}
 
 ## Dailies
 
-First up, starting the day with a [game of chess](https://www.chess.com/play/online). Then, moving onto a quick [Typeracer match](https://play.typeracer.com), [Typelit page](https://www.typelit.io/typing-console/Metamorphosis) and [Monkeytype test](https://monkeytype.com) to yourself typing quickly, warming up to quickly type out a solution to a [Project Euler problem](https://projecteuler.net/archives).
+### 'le' Games
 
-That might be quite an intensive task, so next up we'll cool down a bit with a bit of [Sudoku](https://www.dailysudoku.com/sudoku/play.shtml?today=1), followed by a fun game of [Chessle](https://jackli.gg/chessle/). Now that your mind has relaxed a bit again, let's try an [International Maths Olympiad](obsidian://open?vault=content&file=IMO%20Questions%2Fmds%2Fmds)! Just one question, don't worry :)
+Starting with the infamous [Wordle](https://www.nytimes.com/games/wordle/index.html), moving onto its counterpart [Worldle](https://worldle.teuteuf.fr), and a similar [Globle](https://globle-game.com)! Then, a [Chessle](https://jackli.gg/chessle/) could be fun before completing a slightly different [animal naming game](https://metazooa.com).
 
-By this time, you probably want to move somewhere else, so let's do something we can do on the go if you want to: [Lichess tactics](https://lichess.org/study/topic/Tactics/hot) and [Chess.com puzzle](https://www.chess.com/puzzles). Now that you've moved a bit, let's explore the world in a [Geoguessr game](https://www.geoguessr.com) and make sure you know the country names in [Globle](https://globle-game.com)!
+BUT, the other NYT games are pretty fun too, so complete them [here](https://www.nytimes.com/crosswords).
 
-But, we don't want to forget our [[language learning]]! So, next up we'll quiz some [kana](https://kana-quiz.tofugu.com) and learn/practice some [kanji](https://www.wanikani.com/dashboard). Then, we'll move back to chess for a bit to review my favourite openings - choose one white opening and one black opening to start the day from the following:
+### Typing
+
+Win a quick [Typeracer match](https://play.typeracer.com), type out a [page of Metamorphosis](https://www.typelit.io/typing-console/Metamorphosis), and test your overall typing speed on [Monkeytype](https://monkeytype.com).
+
+### Maths
+
+Let's slowly complete some [International Maths Olympiad](obsidian://open?vault=content&file=IMO%20Questions%2Fmds%2Fmds) questions! Do as many as you want, but at least one.
+
+Next, combine maths with programming with a [Project Euler problem](https://projecteuler.net/archives)!
+
+### Workout
+
+{{ workout }}
+
+### Chess
+
+{{ chess_puzzle }}
+
+```
+My solution:
+...
+```
+
+Now practice your favourite four openings!
 
 - [King's Indian](https://www.youtube.com/watch?v=5XyayUs6J1M) (black opening),
 - [London](https://www.youtube.com/watch?v=dksvHyyI_Vo) (white opening),
 - [Caro-Kann](https://www.youtube.com/watch?v=0p_881Nwoo4) (black opening),
 - [Ruy López](https://www.youtube.com/watch?v=csJKauwbYFk) (white opening).
 
-Now, just before we finish up with some proper thinking, let's combine the previous two dailies into [Worldle](https://worldle.teuteuf.fr), then play the regular old [Wordle](https://www.nytimes.com/games/wordle/index.html). However - you're pretty bad with animal names. So, brush up on them [here](https://metazooa.com)! :D
+Make sure to play your three games of [chess](https://www.chess.com/play/online) today, using these openings, analysing them below:
 
-Finally, we'll end this morning's dailies by making sure you can still program somewhat! Here's a little list, choose a few to explore today:
+- [[Daily Game One ({{ date }})]]
+- [[Daily Game Two ({{ date }})]]
+- [[Daily Game Three ({{ date }})]]
 
-- [Functional programming](https://www.hackerrank.com/domains/fp)
-- [Python](https://www.hackerrank.com/domains/python)
-- [Computational Mathematics](https://www.hackerrank.com/domains/mathematics)
-- [AI](https://www.hackerrank.com/domains/ai)
-- [Regex](https://www.hackerrank.com/domains/regex)
-- [Leetcode](https://leetcode.com/problemset/)
+### Japanese learning
 
-## Today's Schedule
+Well... you want to learn Japanese. So, make sure you keep on top of your [kana](https://kana-quiz.tofugu.com) and [kanji](https://www.wanikani.com/dashboard) studies!
 
-{{ calendar_events }}
+Eventually, start going over the Genki books, too.
 
-## Emails
+### Sudoku
 
-{{ emails }}
+Here's today's [Sudoku](https://www.dailysudoku.com/sudoku/today.shtml)! Maybe you'll have to learn some new techniques to solve this one, who knows!
 
-## Chess
+### Hobonichi
 
-### Daily Puzzle
+- [ ] Tick off the day.
+- [ ] Write down the day summary sentence.
+- [ ] Update monthly habit tracking/weather.
+- [ ] Update weekly schedule.
+- [ ] Update day page.
+- [ ] Update my 100 (if required).
 
-{{ chess_puzzle }}
-
-#### My Solution
-
-```
-...
-```
-
-### Daily Games
-
-Here are the game(s) I've done today, including an analysis for each one:
-
-#### Game One (me vs person)
-
-...
-
-## Good Luck! ✨
+## That's it for today!
 
 {{ good_luck_message }}
 
-### Now...
-
-Have a look at the to-do list in [[The Scholar's Ledger]], or not, you do have free will after all :)
-
 {{ random_emojis }}
 
-# Workout
-
-{{ workout }}
+---
 
 # 風船航路
 

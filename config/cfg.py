@@ -45,7 +45,7 @@ CAL_URLS = [
     "https://calendar.google.com/calendar/ical/c_417sngltsr9kp47l52c9978du0%40group.calendar.google.com/private-735f2692630830375e8a3007ee272360/basic.ics",
     "https://blackboard.lincoln.ac.uk/webapps/calendar/calendarFeed/bf8217b5a6ef45099542d518470fdb29/learn.ics",
     "https://timetable.lincoln.ac.uk/ical/8OzbTTa18Dagy6spCOpfPixa2aOdIJeyrPczNPOva3X89vnBIBPYMEKkYa3pTYdZAT14LfwGmAQ",
-    "https://calendar.google.com/calendar/ical/c_bbf2iasdc4i0s0bnvm0ndc8dj4%40group.calendar.google.com/public/basic.ics",
+    "https://calendar.google.com/calendar/ical/c_bbf2iasdc4i0s0bnvm0ndc8dj4%40group.calendar.google.com/private-9770fe93a5fb3ad602e2409e9154714a/basic.ics",
 ]
 
 # Logging Configuration
