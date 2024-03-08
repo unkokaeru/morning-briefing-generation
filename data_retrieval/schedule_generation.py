@@ -30,16 +30,11 @@ def get_schedule() -> str:
     }
 
     final_schedule = [
-        "- [ ] 08:00 - 09:00 🥫🍜 Breakfast, leave the house (maybe yoga?)",
+        "- [ ] 08:00 - 09:00 🥫🍜 Breakfast :-)",
         f"- [ ] 09:00 - 13:00 {unique_schedule[day_of_week][0]}",
         "- [ ] 13:00 - 14:00 🥫🍜 Lunch!!",
         f"- [ ] 14:00 - 18:00 {unique_schedule[day_of_week][1]}",
         "- [ ] 18:00 - 19:00 🥫🍜 Uh Oh - Dinner Moment",
-        "- [ ] 19:00 - 20:00 📺🎬 Anime/Netflix",
-        "- [ ] 20:00 - 21:00 💌💑 Time with Partner <3",
-        "- [ ] 21:00 - 22:00 🚿🧼 Self-Care n' Hygiene",
-        "- [ ] 22:00 - 23:00 📖🛋 Reading WOO",
-        "- [ ] 23:00 - 00:00 🛌💤 Snooze Mode",
     ]
 
     # Convert schedule to a single string
