@@ -20,7 +20,7 @@ Good morning, William! Here's your morning briefing for today.
 
 Starting with the infamous [Wordle](https://www.nytimes.com/games/wordle/index.html), moving onto its counterpart [Worldle](https://worldle.teuteuf.fr), and a similar [Globle](https://globle-game.com)! Then, a [Chessle](https://jackli.gg/chessle/) could be fun before completing a slightly different [animal naming game](https://metazooa.com).
 
-BUT, the other NYT games are pretty fun too, so complete them [here](https://www.nytimes.com/crosswords).
+BUT, the other NYT games are pretty fun too, so complete them [here](https://www.nytimes.com/crosswords). Oh, there's also new one called [Minecraftle](https://minecraftle.zachmanson.com) - check it out!
 
 ### Typing
 
@@ -68,15 +68,6 @@ Eventually, start going over the Genki books, too.
 
 Here's today's [Sudoku](https://www.dailysudoku.com/sudoku/today.shtml)! Maybe you'll have to learn some new techniques to solve this one, who knows!
 
-### Hobonichi
-
-- [ ] Tick off the day.
-- [ ] Write down the day summary sentence.
-- [ ] Update monthly habit tracking/weather.
-- [ ] Update weekly schedule.
-- [ ] Update day page.
-- [ ] Update my 100 (if required).
-
 ## That's it for today!
 
 {{ good_luck_message }}
@@ -84,7 +75,3 @@ Here's today's [Sudoku](https://www.dailysudoku.com/sudoku/today.shtml)! Maybe y
 {{ random_emojis }}
 
 ---
-
-# 風船航路
-
-{{ day_schedule }}

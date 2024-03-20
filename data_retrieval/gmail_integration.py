@@ -1,4 +1,5 @@
 """Contains functions for fetching data from Gmail."""
+
 import os
 import pickle
 
@@ -55,7 +56,7 @@ def fetch_email_subjects() -> str:
 
     if not messages:
         logger.info("No messages found.")
-        return email_subjects_md + "No messages found.\n"
+        return ""
     else:
         for message in messages:
             msg = (
@@ -78,7 +79,7 @@ def fetch_email_subjects() -> str:
         logger.info("Finished fetching email subjects.")
 
     if not email_subjects_md:
-        natural_language_output = "You're all caught up, no new emails! :D"
+        natural_language_output = ""
     else:
         natural_language_output = prompt_gpt4_turbo(
             OPENAI_API_KEY, email_subjects_md, EMAIL_CONTEXT

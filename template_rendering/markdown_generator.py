@@ -17,8 +17,6 @@ from config.cfg import (
     RSS_URLS,
     SAVE_LOCATION,
     CHESS_CONFIG,
-    SCHEDULE_PROMPT,
-    SCHEDULE_CONTEXT,
 )
 from data_retrieval.calendar_integration import fetch_calendar_events
 from data_retrieval.chess_fetcher import fetch_chess_puzzle
@@ -28,7 +26,6 @@ from data_retrieval.openai_integration import prompt_gpt4_turbo
 from data_retrieval.rss_fetcher import fetch_news
 from data_retrieval.weather_fetcher import get_weather
 from data_retrieval.workout_generation import get_workout
-from data_retrieval.schedule_generation import get_schedule
 from utils.logger import get_logger
 
 
@@ -71,19 +68,6 @@ def doc_gen() -> None:
             EMOJI_PROMPT,
         ),
         "workout": "Rest day! :D" if get_workout() is None else get_workout(),
-        "day_schedule": (
-            "..."
-            if fetch_calendar_events(CAL_URLS) == "..."
-            else prompt_gpt4_turbo(
-                OPENAI_API_KEY,
-                get_schedule()
-                + "\n\n"
-                + SCHEDULE_PROMPT
-                + "\n"
-                + fetch_calendar_events(CAL_URLS),
-                SCHEDULE_CONTEXT,
-            )
-        ),
         # ... other data ...
     }
 

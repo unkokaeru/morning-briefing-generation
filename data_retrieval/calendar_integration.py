@@ -1,4 +1,5 @@
 """Calendar integration module."""
+
 from datetime import datetime
 
 import requests
@@ -68,7 +69,7 @@ def fetch_calendar_events(urls: list[str]) -> str:
 
     # If no events were found, return a message, otherwise return the markdown formatted string in natural language
     if not markdown_output:
-        natural_language_output = "No events for today! :D"
+        natural_language_output = ""
     else:
         natural_language_output = prompt_gpt4_turbo(
             OPENAI_API_KEY, markdown_output, CAL_CONTEXT
