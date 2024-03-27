@@ -10,8 +10,6 @@ from config.cfg import (
     CAL_URLS,
     EMOJI_PROMPT,
     HAIKU_PATH,
-    LUCK_CONTEXT,
-    LUCK_PROMPT,
     OPEN_WEATHER_API_KEY,
     OPENAI_API_KEY,
     RSS_URLS,
@@ -58,11 +56,6 @@ def doc_gen() -> None:
         "calendar_events": fetch_calendar_events(CAL_URLS),
         "emails": fetch_email_subjects(),
         "chess_puzzle": fetch_chess_puzzle(CHESS_CONFIG),
-        "good_luck_message": prompt_gpt4_turbo(
-            OPENAI_API_KEY,
-            LUCK_PROMPT,
-            LUCK_CONTEXT,
-        ),
         "random_emojis": prompt_gpt4_turbo(
             OPENAI_API_KEY,
             EMOJI_PROMPT,

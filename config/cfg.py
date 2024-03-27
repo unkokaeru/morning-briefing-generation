@@ -8,8 +8,6 @@ from rich.logging import RichHandler
 
 # AI Prompting Configuration
 MATHS_PROMPT = "Generate an interesting maths problem for a maths undergraduate student to solve in about five minutes. Use Markdown and Latex if needed. Do not provide a solution, just a final answer."
-LUCK_PROMPT = "Give me a short good luck message! :D"
-LUCK_CONTEXT = "You are a fun motivator!"
 EMOJI_PROMPT = (
     "Give me some random emojis! :D - just return the emojis though, nothing else."
 )
