@@ -38,6 +38,7 @@ Throughout lectures, I could get pretty bored or I just want to do my dailies. T
 - [NYT Games](https://www.nytimes.com/crosswords) (incl. [Strands](https://www.nytimes.com/games/strands)),
 - [Timeguessr](https://www.timeguessr.com),
 - [Bandle](https://www.bandle.app),
+- [SpellCheck Game](https://spellcheckgame.com),
 - [MonkeyType](https://www.monkeytype.com),
 - Bloons TD6 Border(s).
 
